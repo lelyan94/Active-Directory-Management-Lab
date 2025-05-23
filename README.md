@@ -106,6 +106,31 @@ This screenshot shows the results of ping commands to both the Windows Server an
 
 ![Image](https://github.com/user-attachments/assets/ce039072-f27f-49e3-9aa3-bad83d97fd37)
 
+➤ Mapped Network Drive
+Here, a domain user logs into Windows Client 1 and automatically sees the mapped H: drive from the server. This demonstrates domain policies or login scripts successfully applying shared drive mappings.
+
+![Image](https://github.com/user-attachments/assets/b5317564-54b3-4475-b1a3-006635926868)
+
+💻 Windows Client 2
+➤ Hostname Resolution – Ping to Linux and Client 1
+This screenshot shows Windows Client 2 pinging the Linux DHCP server and Windows Client 1 using their hostnames. This validates internal DNS and hostname resolution across all devices.
+
+![Image](https://github.com/user-attachments/assets/6c62eb8e-47e1-4c9a-a494-316ff9e567fe)
+
+![Image](https://github.com/user-attachments/assets/fd482a54-d6c2-4825-ad94-3bf9b09ecff2)
+
+➤ Internet Access Test
+Client 2 demonstrates successful internet connectivity. This shows that NAT via Windows Server is working as intended.
+
+![Image](https://github.com/user-attachments/assets/4e14073b-13d0-4330-bf10-3cf09d784ec6)
+
+➤ Domain User Login Verification
+Using the whoami command, this screenshot confirms that a different domain user is logged into Client 2 (compared to Client 1). This demonstrates centralized user authentication through Active Directory.
+
+![Image](https://github.com/user-attachments/assets/67af7ff8-2a2d-4a33-856b-47d8c6ba3947)
+
+
+
 
 
 
