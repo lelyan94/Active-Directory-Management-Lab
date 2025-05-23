@@ -23,6 +23,8 @@ This project demonstrates a basic Active Directory and DHCP network lab using VM
 
 This screenshot displays the full network setup in VMware Workstation. It shows all four virtual machines: Windows Server, Linux DHCP server, and two Windows Clients. It also highlights the network adapter configuration for each VM, simulating an internal network with NAT and DHCP.
 
+![Image](https://github.com/user-attachments/assets/2b407740-301a-41a0-ba19-5ee00ffb537f)
+
 
 
 
