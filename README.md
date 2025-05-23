@@ -80,6 +80,38 @@ It confirms that the Linux server is using a static IP address and is properly c
 
 ![Image](https://github.com/user-attachments/assets/1b3ca73d-3a85-44db-821c-de59d245776b)
 
+![Image](https://github.com/user-attachments/assets/95b5d8ad-bed3-45a8-a847-6d5675bdfeed)
+
+
+➤ Internet Connectivity from Linux Server
+This screenshot demonstrates that the Linux DHCP server can access the internet (likely through the NAT configured on the Windows Server). The connection is verified via a successful ping or a browser check.
+
+![Image](https://github.com/user-attachments/assets/4ca03bc0-aeb8-4f75-8961-d908f3fdc6b6)
+
+![Image](https://github.com/user-attachments/assets/3c3487c2-6c22-4816-bf93-b11d5c0087f2)
+
+➤ DHCP Scope Configuration
+This image shows the configuration of the DHCP service on the Linux server, including the defined IP address range (scope) used to assign IPs to Windows clients dynamically.
+
+![Image](https://github.com/user-attachments/assets/b4f07681-53e8-4128-b653-5b5a67be9ab1)
+
+💻 Windows Client 1
+➤ IP Configuration and DHCP Lease
+This ipconfig /all output shows that Windows Client 1 received its IP address from the Linux DHCP server. It also confirms the assigned domain name and DNS server used.
+
+![Image](https://github.com/user-attachments/assets/6fc5909f-7ff1-49d5-864f-22211293e23b)
+
+➤ Hostname Resolution with Ping
+This screenshot shows the results of ping commands to both the Windows Server and another Windows Client using hostnames (not IP addresses). It confirms DNS is working correctly in the domain.
+
+![Image](https://github.com/user-attachments/assets/ce039072-f27f-49e3-9aa3-bad83d97fd37)
+
+
+
+
+
+
+
 
 
 
