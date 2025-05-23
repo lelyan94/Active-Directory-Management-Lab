@@ -33,7 +33,53 @@ Windows Client1
 ![Image](https://github.com/user-attachments/assets/08e8a965-ea86-4ecc-b2d7-d226945c686f)
 
 Windows Client2
-https://github.com/lelyan94/Active-Directory-Management-Lab/issues/4#issue-3085352636
+![Image](https://github.com/user-attachments/assets/2b407740-301a-41a0-ba19-5ee00ffb537f)
+
+
+🪟 Windows Server
+➤ Active Directory – Users and Computers
+The Windows Server is configured as a domain controller. This screenshot shows the Active Directory Users and Computers interface, where:
+
+- Two Windows clients have been successfully joined to the domain.
+  
+  ![Image](https://github.com/user-attachments/assets/23479f25-ee90-4c0b-a995-f9a739f2a74f)
+  
+- Five domain user accounts have been created.
+  
+![Image](https://github.com/user-attachments/assets/e286a9dd-d448-4844-947d-dba291bf0d23)
+
+➤ DNS – Forward Lookup Zones
+The DNS service is installed on the Windows Server. This screenshot shows the Forward Lookup Zones, which include host (A) records for internal machines. This allows domain name resolution within the local network.
+
+![Image](https://github.com/user-attachments/assets/7b89139c-eb07-4806-a024-2dfc82acd872)
+
+➤ RRAS – NAT Configuration
+This screenshot shows the Routing and Remote Access Service (RRAS) setup. The Windows Server is configured to act as a NAT gateway, allowing internal machines (clients and Linux server) to access the internet through the server’s external NIC.
+
+![Image](https://github.com/user-attachments/assets/37ec644a-be30-45ba-a56a-779ad7b4c846)
+
+➤ IP Configuration of Windows Server
+This screenshot shows the result of the ipconfig /all command on the Windows Server. It confirms the static IP address, DNS settings, gateway configuration, and domain details for the server.
+
+![Image](https://github.com/user-attachments/assets/a654cd9a-7409-43e5-a4a0-0f6c7ff7f6c2)
+
+🐧 Linux DHCP Server
+➤ Static IP and Host Settings
+This screenshot combines outputs from:
+
+- ip add
+- ip route
+- hostname
+- cat /etc/resolv.conf
+
+It confirms that the Linux server is using a static IP address and is properly configured as a DHCP server in the local network.
+
+![Image](https://github.com/user-attachments/assets/fd6ce034-b536-44d5-ba0e-4ed6bf4f374b)
+
+
+
+
+
 
 
 
