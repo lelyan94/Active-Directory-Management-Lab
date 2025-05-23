@@ -1,149 +1,168 @@
-# Active-Directory-Management-Lab
-AD-Network-Lab-Simulation
+# 🖧 Active Directory Management Lab
 
-#🖧 AD Network Lab Simulation
+This project simulates a small enterprise network using **VMware Workstation**, built for learning and demonstrating key infrastructure concepts: Active Directory, DNS, NAT, and DHCP. It includes a **Windows Server**, a **Linux DHCP server**, and **two Windows clients**.
 
-# Introduction
-This project demonstrates a basic Active Directory and DHCP network lab using VMware Workstation. The lab includes Windows Server, Linux DHCP server, and two Windows clients, simulating a functional domain environment.
+---
 
 ## 🛠️ Tools Used
+
 - VMware Workstation
-- Windows Server
+- Windows Server (Domain Controller, DNS, NAT)
 - Ubuntu Server (DHCP)
 - Windows 10 Clients
 
-## 📁 Project Structure
-- `Windows Server`: AD, DNS, NAT, and RRAS configuration
-- `Linux DHCP Server`: Static IP setup, DHCP service, internet access
-- `Windows Clients`: Domain joining, IP assignment, connectivity tests
+---
 
-## 🔧 VMware Workstation
+## 🧩 Project Structure
 
-### ➤ VMware Workstation – Network Topology
+| Component          | Description                                                     |
+|--------------------|-----------------------------------------------------------------|
+| Windows Server     | AD, DNS setup, RRAS NAT for internet access                     |
+| Linux DHCP Server  | Static IP, DHCP configuration, internal internet access         |
+| Windows Clients    | DHCP address acquisition, domain join, connectivity testing     |
 
-This screenshot displays the full network setup in VMware Workstation. It shows all four virtual machines: Windows Server, Linux DHCP server, and two Windows Clients. It also highlights the network adapter configuration for each VM, simulating an internal network with NAT and DHCP.
+---
 
-Windows SERVER 
-![Image](https://github.com/user-attachments/assets/2b407740-301a-41a0-ba19-5ee00ffb537f)
+## 🖥️ VMware Network Topology
 
-Linux DHCP SERVER
-![Image](https://github.com/user-attachments/assets/a43f8287-5a49-4365-8488-8beba85a1d2a)
+Each VM is configured with appropriate NICs in VMware Workstation. The layout shows:
+- Network adapter types
+- Internal and external routing through NAT
 
-Windows Client1
-![Image](https://github.com/user-attachments/assets/08e8a965-ea86-4ecc-b2d7-d226945c686f)
+- **Windows Server**
+![Windows Server](https://github.com/user-attachments/assets/2b407740-301a-41a0-ba19-5ee00ffb537f)
 
-Windows Client2
-![Image](https://github.com/user-attachments/assets/2b407740-301a-41a0-ba19-5ee00ffb537f)
+- **Linux DHCP Server**
+![Linux DHCP Server](https://github.com/user-attachments/assets/a43f8287-5a49-4365-8488-8beba85a1d2a)
 
+- **Windows Client 1**
+![Windows Client 1](https://github.com/user-attachments/assets/08e8a965-ea86-4ecc-b2d7-d226945c686f)
 
-🪟 Windows Server
-➤ Active Directory – Users and Computers
-The Windows Server is configured as a domain controller. This screenshot shows the Active Directory Users and Computers interface, where:
+- **Windows Client 2**
+![Windows Client 2](https://github.com/user-attachments/assets/2b407740-301a-41a0-ba19-5ee00ffb537f)
 
-- Two Windows clients have been successfully joined to the domain.
-  
-  ![Image](https://github.com/user-attachments/assets/23479f25-ee90-4c0b-a995-f9a739f2a74f)
-  
-- Five domain user accounts have been created.
-  
-![Image](https://github.com/user-attachments/assets/e286a9dd-d448-4844-947d-dba291bf0d23)
+---
 
-➤ DNS – Forward Lookup Zones
-The DNS service is installed on the Windows Server. This screenshot shows the Forward Lookup Zones, which include host (A) records for internal machines. This allows domain name resolution within the local network.
+## 🪟 Windows Server Configuration
 
-![Image](https://github.com/user-attachments/assets/7b89139c-eb07-4806-a024-2dfc82acd872)
+### 🔹 Active Directory Setup
 
-➤ RRAS – NAT Configuration
-This screenshot shows the Routing and Remote Access Service (RRAS) setup. The Windows Server is configured to act as a NAT gateway, allowing internal machines (clients and Linux server) to access the internet through the server’s external NIC.
+The server is configured as a Domain Controller. These screenshots show:
+- Two Windows clients added to the domain
+- Five user accounts created
 
-![Image](https://github.com/user-attachments/assets/37ec644a-be30-45ba-a56a-779ad7b4c846)
+![Clients in AD](https://github.com/user-attachments/assets/23479f25-ee90-4c0b-a995-f9a739f2a74f)
+![Users in AD](https://github.com/user-attachments/assets/e286a9dd-d448-4844-947d-dba291bf0d23)
 
-➤ IP Configuration of Windows Server
-This screenshot shows the result of the ipconfig /all command on the Windows Server. It confirms the static IP address, DNS settings, gateway configuration, and domain details for the server.
+### 🔹 DNS Configuration
 
-![Image](https://github.com/user-attachments/assets/a654cd9a-7409-43e5-a4a0-0f6c7ff7f6c2)
+Configured Forward Lookup Zone to resolve internal domain names. A records were added for each device.
 
-🐧 Linux DHCP Server
-➤ Static IP and Host Settings
-This screenshot combines outputs from:
+![DNS Zone](https://github.com/user-attachments/assets/7b89139c-eb07-4806-a024-2dfc82acd872)
 
-- ip add
-- ip route
-- hostname
-- cat /etc/resolv.conf
+### 🔹 RRAS NAT Setup
 
-It confirms that the Linux server is using a static IP address and is properly configured as a DHCP server in the local network.
+The Windows Server is configured with RRAS to provide internet access for internal machines through NAT.
 
-![Image](https://github.com/user-attachments/assets/1cbe1ab1-d548-42aa-9922-3cef836915fc)
+![RRAS NAT](https://github.com/user-attachments/assets/37ec644a-be30-45ba-a56a-779ad7b4c846)
 
-![Image](https://github.com/user-attachments/assets/ea23a4de-51c2-4145-8969-4dc49bcabde6)
+### 🔹 Server Network Configuration
 
-![Image](https://github.com/user-attachments/assets/1b3ca73d-3a85-44db-821c-de59d245776b)
+`ipconfig /all` confirms static IP, correct DNS and gateway setup.
 
-![Image](https://github.com/user-attachments/assets/95b5d8ad-bed3-45a8-a847-6d5675bdfeed)
+![Server IP Config](https://github.com/user-attachments/assets/a654cd9a-7409-43e5-a4a0-0f6c7ff7f6c2)
 
+---
 
-➤ Internet Connectivity from Linux Server
-This screenshot demonstrates that the Linux DHCP server can access the internet (likely through the NAT configured on the Windows Server). The connection is verified via a successful ping or a browser check.
+## 🐧 Linux DHCP Server Configuration
 
-![Image](https://github.com/user-attachments/assets/4ca03bc0-aeb8-4f75-8961-d908f3fdc6b6)
+### 🔹 Static IP and System Info
 
-![Image](https://github.com/user-attachments/assets/3c3487c2-6c22-4816-bf93-b11d5c0087f2)
+Commands executed:
+- `ip add` to show network interface configuration
+- `ip route` to verify routing table
+- `hostname` to confirm system name
+- `cat /etc/resolv.conf` to show DNS settings
 
-➤ DHCP Scope Configuration
-This image shows the configuration of the DHCP service on the Linux server, including the defined IP address range (scope) used to assign IPs to Windows clients dynamically.
+This confirms static IP setup and internal communication.
 
-![Image](https://github.com/user-attachments/assets/b4f07681-53e8-4128-b653-5b5a67be9ab1)
+![ip add](https://github.com/user-attachments/assets/1cbe1ab1-d548-42aa-9922-3cef836915fc)
+![ip route](https://github.com/user-attachments/assets/ea23a4de-51c2-4145-8969-4dc49bcabde6)
+![hostname](https://github.com/user-attachments/assets/1b3ca73d-3a85-44db-821c-de59d245776b)
+![resolv.conf](https://github.com/user-attachments/assets/95b5d8ad-bed3-45a8-a847-6d5675bdfeed)
 
-💻 Windows Client 1
-➤ IP Configuration and DHCP Lease
-This ipconfig /all output shows that Windows Client 1 received its IP address from the Linux DHCP server. It also confirms the assigned domain name and DNS server used.
+### 🔹 Internet Connectivity Test
 
-![Image](https://github.com/user-attachments/assets/6fc5909f-7ff1-49d5-864f-22211293e23b)
+Proves that the Linux server can access the internet through the NAT-configured Windows Server.
 
-➤ Hostname Resolution with Ping
-This screenshot shows the results of ping commands to both the Windows Server and another Windows Client using hostnames (not IP addresses). It confirms DNS is working correctly in the domain.
+![Internet Ping 1](https://github.com/user-attachments/assets/4ca03bc0-aeb8-4f75-8961-d908f3fdc6b6)
+![Internet Ping 2](https://github.com/user-attachments/assets/3c3487c2-6c22-4816-bf93-b11d5c0087f2)
 
-![Image](https://github.com/user-attachments/assets/ce039072-f27f-49e3-9aa3-bad83d97fd37)
+### 🔹 DHCP Scope
 
-➤ Mapped Network Drive
-Here, a domain user logs into Windows Client 1 and automatically sees the mapped H: drive from the server. This demonstrates domain policies or login scripts successfully applying shared drive mappings.
+Shows the DHCP configuration range used to assign IPs to Windows clients.
 
-![Image](https://github.com/user-attachments/assets/b5317564-54b3-4475-b1a3-006635926868)
+![DHCP Scope](https://github.com/user-attachments/assets/b4f07681-53e8-4128-b653-5b5a67be9ab1)
 
-💻 Windows Client 2
-➤ Hostname Resolution – Ping to Linux and Client 1
-This screenshot shows Windows Client 2 pinging the Linux DHCP server and Windows Client 1 using their hostnames. This validates internal DNS and hostname resolution across all devices.
+---
 
-![Image](https://github.com/user-attachments/assets/6c62eb8e-47e1-4c9a-a494-316ff9e567fe)
+## 💻 Windows Client 1
 
-![Image](https://github.com/user-attachments/assets/fd482a54-d6c2-4825-ad94-3bf9b09ecff2)
+### 🔹 DHCP Lease & Domain Info
 
-➤ Internet Access Test
-Client 2 demonstrates successful internet connectivity. This shows that NAT via Windows Server is working as intended.
+Shows that Client 1 received an IP from the DHCP server and joined the domain.
 
-![Image](https://github.com/user-attachments/assets/4e14073b-13d0-4330-bf10-3cf09d784ec6)
+![Client1 IPConfig](https://github.com/user-attachments/assets/6fc5909f-7ff1-49d5-864f-22211293e23b)
 
-➤ Domain User Login Verification
-Using the whoami command, this screenshot confirms that a different domain user is logged into Client 2 (compared to Client 1). This demonstrates centralized user authentication through Active Directory.
+### 🔹 Hostname Resolution
 
-![Image](https://github.com/user-attachments/assets/67af7ff8-2a2d-4a33-856b-47d8c6ba3947)
+Tests ping to other domain devices by hostname — validating DNS.
 
+![Ping by Hostname](https://github.com/user-attachments/assets/ce039072-f27f-49e3-9aa3-bad83d97fd37)
 
+### 🔹 Mapped Network Drive
 
+Verifies mapped drive appears after domain login — proof of applied group policy or login script.
 
+![Mapped Drive](https://github.com/user-attachments/assets/b5317564-54b3-4475-b1a3-006635926868)
 
+---
 
+## 💻 Windows Client 2
 
+### 🔹 Hostname Resolution
 
+Pings to Linux DHCP server and Client 1 — confirming name resolution works both ways.
 
+![Client2 Ping 1](https://github.com/user-attachments/assets/6c62eb8e-47e1-4c9a-a494-316ff9e567fe)
+![Client2 Ping 2](https://github.com/user-attachments/assets/fd482a54-d6c2-4825-ad94-3bf9b09ecff2)
 
+### 🔹 Internet Access
 
+Client 2 can reach the internet through the NAT-enabled Windows Server.
 
+![Client2 Internet](https://github.com/user-attachments/assets/4e14073b-13d0-4330-bf10-3cf09d784ec6)
 
+### 🔹 Domain User Login Verification
 
+Using `whoami` to confirm a different domain user is logged in, verifying centralized domain authentication.
 
+![whoami](https://github.com/user-attachments/assets/67af7ff8-2a2d-4a33-856b-47d8c6ba3947)
 
+---
 
+## 📌 Summary
 
+This lab successfully simulates a domain-based network with:
+
+- ✔️ Active Directory and centralized user management
+- ✔️ Internal DNS resolution
+- ✔️ NAT internet access via RRAS
+- ✔️ DHCP services on a separate Linux server
+- ✔️ Mapped drives and hostname resolution
+- ✔️ Domain login from multiple clients
+
+All services are configured and tested inside an isolated VMware Workstation environment, making this a complete self-contained infrastructure lab.
+
+---
 
