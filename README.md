@@ -2,6 +2,9 @@
 
 This project simulates a small enterprise network using **VMware Workstation**, built for learning and demonstrating key infrastructure concepts: Active Directory, DNS, NAT, and DHCP. It includes a **Windows Server**, a **Linux DHCP server**, and **two Windows clients**.
 
+![Image](https://github.com/user-attachments/assets/79020814-f4ca-4502-acfb-956722cccb68)
+
+
 ---
 
 ## 🛠️ Tools Used
