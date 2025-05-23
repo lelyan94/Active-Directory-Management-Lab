@@ -3,7 +3,7 @@ AD-Network-Lab-Simulation
 
 #🖧 AD Network Lab Simulation
 
-#Introduction
+# Introduction
 This project demonstrates a basic Active Directory and DHCP network lab using VMware Workstation. The lab includes Windows Server, Linux DHCP server, and two Windows clients, simulating a functional domain environment.
 
 ## 🛠️ Tools Used
@@ -16,5 +16,15 @@ This project demonstrates a basic Active Directory and DHCP network lab using VM
 - `Windows Server`: AD, DNS, NAT, and RRAS configuration
 - `Linux DHCP Server`: Static IP setup, DHCP service, internet access
 - `Windows Clients`: Domain joining, IP assignment, connectivity tests
+
+## 🔧 VMware Workstation
+
+### ➤ VMware Workstation – Network Topology
+
+This screenshot displays the full network setup in VMware Workstation. It shows all four virtual machines: Windows Server, Linux DHCP server, and two Windows Clients. It also highlights the network adapter configuration for each VM, simulating an internal network with NAT and DHCP.
+
+
+
+
 
 
