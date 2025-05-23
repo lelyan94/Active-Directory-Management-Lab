@@ -74,7 +74,11 @@ This screenshot combines outputs from:
 
 It confirms that the Linux server is using a static IP address and is properly configured as a DHCP server in the local network.
 
-![Image](https://github.com/user-attachments/assets/fd6ce034-b536-44d5-ba0e-4ed6bf4f374b)
+![Image](https://github.com/user-attachments/assets/1cbe1ab1-d548-42aa-9922-3cef836915fc)
+
+![Image](https://github.com/user-attachments/assets/ea23a4de-51c2-4145-8969-4dc49bcabde6)
+
+![Image](https://github.com/user-attachments/assets/1b3ca73d-3a85-44db-821c-de59d245776b)
 
 
 
